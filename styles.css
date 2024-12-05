@@ -1,0 +1,119 @@
+body {
+    font-family: sans-serif; /* Choose a modern font */
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #f2f2f2; /* Light background for header */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .hero {
+    background-color: #e0e0e0; /* Slightly darker background for hero */
+    padding: 40px 0; 
+    text-align: center;
+    overflow: hidden; /* To contain falling elements */
+    position: relative; /* For positioning the cylinder */
+  }
+  
+  .cylinder {
+    width: 200px;
+    height: 300px;
+    background-color: #fff; /* White cylinder */
+    border-radius: 100px/50px; /* Create the cylinder shape */
+    margin: 0 auto;
+    position: relative; /* To contain falling elements */
+  }
+  
+  .falling-element {
+    position: absolute;
+    top: -50px; /* Start above the cylinder */
+    width: 100px;
+    padding: 10px;
+    background-color: #3498db; /* Example color */
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    animation: fall 5s linear infinite; /* Adjust duration as needed */
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -50px;
+      opacity: 0;
+    }
+    100% {
+      top: 350px; /* Fall below the cylinder */
+      opacity: 1;
+    }
+  }
+  
+  /* Add different delays for each falling element */
+  .falling-element:nth-child(1) { animation-delay: 0s; }
+  .falling-element:nth-child(2) { animation-delay: 1s; }
+  .falling-element:nth-child(3) { animation-delay: 2s; }
+  .falling-element:nth-child(4) { animation-delay: 3s; }
+  
+  .sections {
+    display: flex;
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    justify-content: space-between;
+  }
+  
+  .section {
+    width: 48%; /* Two sections per row */
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white; 
+  }
+  
+  .menu {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .menu-item {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #333; 
+    color: white;
+    cursor: pointer;
+  }
+  
+  .contact {
+    text-align: center;
+  }.features {
+    padding: 40px 0; 
+    text-align: center;
+  }
+  
+  .feature {
+    width: 30%; /* Adjust as needed */
+    margin: 0 auto 20px auto; /* Space between features */
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a subtle border */
+    border-radius: 5px;
+  }
+  
+  .feature img {
+    max-width: 100px; /* Adjust image size as needed */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Example color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
